@@ -23,11 +23,11 @@
 		<sourceDirectory>lib/src/main/java</sourceDirectory>
 		<scriptSourceDirectory>lib/src/main/scripts</scriptSourceDirectory>
 		<testSourceDirectory>lib/src/test/java</testSourceDirectory>
-		<resources>
-			<resource>
-				<directory>lib/src/main/proto</directory>
-			</resource>
-		</resources>
+		<resources>  
+        	<resource>
+        		<directory>lib/src/main/proto</directory>
+        	</resource>  
+  		</resources >  
 		<testResources>
 			<testResource>
 				<directory>lib/src/test/resources</directory>
