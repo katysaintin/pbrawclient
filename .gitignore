@@ -12,3 +12,5 @@ lib/bin
 .DS_Store
 /.settings/
 /target/
+/.classpath
+.classpath
