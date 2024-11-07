@@ -31,7 +31,7 @@ public class SinglePVRetrievalTest {
      */
     @Test
     public void testSingleFileWithWellKnownPoints() throws Exception {
-        try (FileInputStream fis = new FileInputStream("src/test/resources/sampledata/singleFileWithWellKnownPoints");
+        try (FileInputStream fis = new FileInputStream("lib/src/test/resources/sampledata/singleFileWithWellKnownPoints");
                 InputStreamBackedGenMsg is = new InputStreamBackedGenMsg(fis)) {
             int eventCount = 0;
             Timestamp previousTs = new Timestamp(0);
@@ -67,7 +67,7 @@ public class SinglePVRetrievalTest {
      */
     @Test
     public void testMultipleChunksInSameYear() throws Exception {
-        try (FileInputStream fis = new FileInputStream("src/test/resources/sampledata/multipleChunksInSameYear");
+        try (FileInputStream fis = new FileInputStream("lib/src/test/resources/sampledata/multipleChunksInSameYear");
                 InputStreamBackedGenMsg is = new InputStreamBackedGenMsg(fis)) {
             int eventCount = 0;
             Timestamp previousTs = new Timestamp(0);
@@ -104,7 +104,7 @@ public class SinglePVRetrievalTest {
     @Test
     public void testMultipleChunksOfRandomSizeInSameYear() throws Exception {
         try (FileInputStream fis =
-                        new FileInputStream("src/test/resources/sampledata/multipleChunksOfRandomSizeInSameYear");
+                        new FileInputStream("lib/src/test/resources/sampledata/multipleChunksOfRandomSizeInSameYear");
                 InputStreamBackedGenMsg is = new InputStreamBackedGenMsg(fis)) {
             int eventCount = 0;
             Timestamp previousTs = new Timestamp(0);
@@ -140,7 +140,7 @@ public class SinglePVRetrievalTest {
      */
     @Test
     public void testMultipleChunksInMultipleYears() throws Exception {
-        try (FileInputStream fis = new FileInputStream("src/test/resources/sampledata/multipleChunksInMultipleYears");
+        try (FileInputStream fis = new FileInputStream("lib/src/test/resources/sampledata/multipleChunksInMultipleYears");
                 InputStreamBackedGenMsg is = new InputStreamBackedGenMsg(fis)) {
             int eventCountInYear = 0;
             int totalEventCount = 0;
@@ -186,7 +186,7 @@ public class SinglePVRetrievalTest {
     public void testFilesForDBRTypes() throws Exception {
         for (PayloadType payloadType : PayloadType.values()) {
             try (FileInputStream fis =
-                            new FileInputStream("src/test/resources/sampledata/" + payloadType + "_sampledata");
+                            new FileInputStream("lib/src/test/resources/sampledata/" + payloadType + "_sampledata");
                     InputStreamBackedGenMsg is = new InputStreamBackedGenMsg(fis)) {
                 int eventCount = 0;
                 int expectedEventCount = 366;
@@ -228,7 +228,7 @@ public class SinglePVRetrievalTest {
      */
     @Test
     public void testOneDaysWorthOfDBRDoubleData() throws Exception {
-        try (FileInputStream fis = new FileInputStream("src/test/resources/sampledata/onedaysdbrdouble");
+        try (FileInputStream fis = new FileInputStream("lib/src/test/resources/sampledata/onedaysdbrdouble");
                 InputStreamBackedGenMsg is = new InputStreamBackedGenMsg(fis)) {
             int eventCount = 0;
             Timestamp previousTs = new Timestamp(0);
